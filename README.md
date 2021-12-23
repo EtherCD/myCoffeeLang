@@ -1,9 +1,9 @@
 # myCoffeeLang
-The language of dreams or nightmares
+`The language of dreams or nightmares`
 
-An unusual programming language based on operators like <strong><-</strong> or <strong>-></strong>
+`An unusual programming language based on operators like <strong><-</strong> or <strong>-></strong>`
 
-Quite interesting language and timely difficult
+`Quite interesting language and timely weird`
   
 # Assembling the language
 1.Download and install node.js
