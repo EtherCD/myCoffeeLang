@@ -27,3 +27,15 @@ end;
 while <- true -- #or var boolean
 	break;
 end;
+
+#Switch
+
+var s <- "a";
+
+switch (s) <-
+	<- case ("a"): println <- "you entered the value a";
+	<- case ("b"): println <- "you entered the value b";
+	<- case ("c"): println <- "you entered the value c";
+	<- case ("d"): println <- "you entered the value d";
+	<- defualt: println <- "?_?";
+end;
