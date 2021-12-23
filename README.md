@@ -5,7 +5,7 @@ An unusual programming language based on operators like <strong><-</strong> or <
 
 Quite interesting language and timely difficult
   
-#Assembling the language
+# Assembling the language
 
-#Windows
+# Windows
   
