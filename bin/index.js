@@ -1,15 +1,14 @@
-let fs = require("fs")
+let fs = require("fs");
+let dictionary = require("./Dictionary.js").dictionary;
+let lexer = require("./Lexer.js").lexer;
 
 fs.readFile("./src/main.coffeelang", "utf-8", function (error, content) {
-	let text = content.replace(/\s\s+/gm, " ")
-	let	strings = text.split(";")
+	if (error === null) {
+		let lexems = lexer(content, dictionary);
 
-	for (let i = 0; i < strings.lenght; i++) {
-		let currentString = strings[i].trim()
+		console.log(JSON.stringify(lexems, null, 4));
 		
-		if (currentString !== "") {
-			let words = currentString.split(" ")
-			console.log(words)
-		}
+	} else {
+		console.log("Error: Can't open file!");
 	}
 })
