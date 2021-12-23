@@ -8,3 +8,5 @@ fn b(a:int, b:float) <- float --
 	print <- "This is an example of using a function that returns a float";
 	<- a * b;
 end;
+
+b(10, 10.6);
