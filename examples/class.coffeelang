@@ -1,0 +1,11 @@
+class Test <-
+	<- num a <- 10;
+	<- num b <- a - 9;
+	<- float c <- 10.9;
+	<- str d <- "0_o";
+	<- var e <- ":}";
+	
+	<- simple_funktion() <- var --
+		<- a / c;
+	end;
+end;

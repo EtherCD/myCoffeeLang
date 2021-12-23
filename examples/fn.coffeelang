@@ -1,0 +1,10 @@
+fn a() ->
+	print <- "Hello User! This is an example of using the function";
+end;
+
+a;
+
+fn b(a:int, b:float) <- float --
+	print <- "This is an example of using a function that returns a float";
+	<- a * b;
+end;
