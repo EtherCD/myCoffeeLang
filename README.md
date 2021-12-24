@@ -11,13 +11,15 @@
 >2.Download the code
   
 >3.Execute next command
+  
+>4.And start writing wonderful code!
 `$ node bin/index.js`
 
 ### Example
 
 ```
-var a <- 10;
-var b <- a - 9;
-var c <- "c is: ";
-println <- c + b;
+var <- (nam)a<-10;
+var <- (num)b<-10 - 5;
+var <- (str)c<-"c is: ";
+println <- (str)"Hello World!";
 ```
