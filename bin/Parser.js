@@ -6,8 +6,8 @@ function parser(lexems, dictionary) {
 	if (lexems && lexems.lenght !== 0) {
 		for (let lexem of lexems) {
 			let functionName = lexem["function"];
-			let typeObj = lexem["type"];
-			let valueObj = lexem["value"];
+			let typeObj = lexem["type"].trim();
+			let valueObj = lexem["value"].trim();
 
 			if (lexem["function"] && dictionary["function"][functionName]) {
 				let currentFunction = dictionary["function"][functionName.toLowerCase()];

@@ -1,2 +1,3 @@
-print<- (num)10;
-print<- (float)10.9; #Innovations is is #
+println<-(num)10;
+println<-(float)10.9;
+println<-(num)10+9; #Innovations is is #
