@@ -1,3 +1,3 @@
-a <- 100;
-b <- 990;
-println <- "Hello World!";
+println<-(num)10; #Int
+println<-(float)10.9; #Float
+println<-(str)Hello World; #Str is not work!

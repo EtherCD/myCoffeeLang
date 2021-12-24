@@ -7,89 +7,39 @@ let lexer = function (content, dictionary) {
 	for (let string of strings) {
 		let currentString = string.trim();
 
-		if (currentString !== "") {
-			let words = currentString.split(" ");
-			let copyString = currentString;
-			let stringObjects = {};
+		if (currentString !== "" && currentString[0] !== "#") {
+			let parts = currentString.split("<-");
 
-			let command = words[0];
+			let command = parts[0].trim();
+			let fullValue = parts[1].trim();
+			let type = null;
+			let value = null;
 
-			if (dictionary["function"].indexOf(command.toLowerCase()) !== -1) {
-				Object.assign(stringObjects, {"function":command});
-			} else {
-				Object.assign(stringObjects, {"ufunction":command})
-			}
+			let obj = {};
 
-			let value = copyString.replace(new RegExp(command + " <- ", "g"), "");
-
-			if (/\"(.*)\"/gim.test(value)) {
-				if (value.lenght === 1) {
-					Object.assign(stringObjects, {
-						"value":{
-							"type": "char",
-							"value": value
-						}
-					});
-				} else {
-					Object.assign(stringObjects, {
-						"value":{
-							"type": "string",
-							"value": value
-						}
-					});
-				}
-			} else {
-				//Number
-
-				//Object.assign(stringObjects, {"number":value});
-
-				if (Number(value)) {
-					if (Number(value) % 1 === 0) {
-						if (Number(value) > -2147483648 && Number(value) < 2147483648) {
-							Object.assign(stringObjects, {
-								"value":{
-									"type": "number",
-									"value": Number(value)
-								}
-							});
-						} else {
-							if (Number(value) > -9223372036854775808 && Number(value) > 9223372036854775808) {
-								Object.assign(stringObjects, {
-									"value":{
-										"type": "number",
-										"subtype": "lognnum",
-										"value": Number(value)
-									}
-								});
-							} else {
-								Object.assign(stringObjects, {
-									"value":{
-										"type": "number",
-										"subtype": "infinity",
-										"value": Number(value)
-									}
-								});
-							}
-						}
-					} else {
-						Object.assign(stringObjects, {
-							"value":{
-								"type": "float",
-								"value": Number(value)
-							}
+			if (/\((.*?)\)/g.test(fullValue)) {
+				type = fullValue.match(/\((.*?)\)/g)[0].slice(1, -1);
+				value = fullValue.replace(new RegExp("\\("+type+"\\)", "g"), "");
+				
+				if (dictionary["function"][command.toLowerCase()]) {
+					if (dictionary["types"].indexOf(type) !== -1) {
+						Object.assign(obj, {
+							"function": command,
+							"type": 	type,
+							"value": 	value
 						});
+					} else {
+						console.error("Data type error: Unknown data type");
 					}
-				} else {
-					Object.assign(stringObjects, {
-						"value":{
-							"type": "undefined",
-							"value": value
-						}
-					});
+				} else  {
+					//Object.assign(obj, {"ufunction":command});
+					console.error("Naming error: unknown function");
 				}
+			} else {
+				console.error("Syntax error: value type not specified!")
 			}
 
-			lexems.push(stringObjects);
+			lexems.push(obj);
 
 		}
 	}
