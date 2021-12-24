@@ -4,7 +4,28 @@
 ***An unusual programming language based on operators like <strong><-</strong> or <strong>-></strong>***
 
 ***Quite interesting language and timely weird***
+
+## API
   
+>Data types:
+  
+  num   <- Number   Example 10
+           
+  float <- Fraction Example 10.9
+  
+  char  <- Letter   Example "A"
+           
+  str   <- String   Example "Hello World!"
+  
+
+>Existing commands and an example of using the command:
+  
+  print <- ("type of date") "value";
+  
+  println <- ("type of date") "value";
+  
+  var <- ("type of date") "Variable name"<-"value";
+           
 ## Assembling the language
 >1.Download and install node.js
 
