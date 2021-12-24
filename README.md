@@ -11,9 +11,9 @@
 >2.Download the code
   
 >3.Execute next command
-  
->4.And start writing wonderful code!
 `$ node bin/index.js`
+
+>4.And start writing wonderful code!
 
 ### Example
 
