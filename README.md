@@ -25,6 +25,8 @@
   println <- ("type of date") "value";
   
   var <- ("type of date") "Variable name"<"value";
+   
+  ### Since version 1.0.1 (beta 1)
   
   if <- (("The first value of the condition") (< or > or =) ("The second value of the condition")) ; <- end of condition
            
