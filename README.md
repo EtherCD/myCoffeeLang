@@ -44,7 +44,7 @@
 
 ```
 var <- (nam)a<10;
-var <- (num)b<10 - 5;
+var <- (num)b<10 + 9;
 var <- (str)c<"c is: ";
 println <- (str)"Hello World!";
 ```
