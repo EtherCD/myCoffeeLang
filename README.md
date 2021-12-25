@@ -25,6 +25,8 @@
   println <- ("type of date") "value";
   
   var <- ("type of date") "Variable name"<"value";
+  
+  if <- (("The first value of the condition") (< or > or =) ("The second value of the condition")) ; <- end of condition
            
 ## Assembling the language
 >1.Download and install node.js
