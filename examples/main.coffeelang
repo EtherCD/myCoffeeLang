@@ -2,3 +2,7 @@ println<-(num)10;
 println<-(float)10.9;
 println<-(num)10+9; #Innovations is is #
 var<-(num)a<10;
+
+if <- (10 < 9) 
+	#Here is the code but without (;)
+;

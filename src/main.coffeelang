@@ -5,4 +5,8 @@ println<-(num)10+9;
 println<-(str)"Hello World!";
 println<-(float)36.48/7;
 println<-(char)"X";
-var<-(num)a < 10;
+var<-(num)a<10;
+
+if <- (10 < 9) 
+
+;
