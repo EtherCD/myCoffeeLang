@@ -24,7 +24,7 @@
   
   println <- ("type of date") "value";
   
-  var <- ("type of date") "Variable name"<-"value";
+  var <- ("type of date") "Variable name"<"value";
            
 ## Assembling the language
 >1.Download and install node.js
