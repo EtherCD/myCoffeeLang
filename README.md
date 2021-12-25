@@ -43,8 +43,8 @@
 ### Example
 
 ```
-var <- (nam)a<-10;
-var <- (num)b<-10 - 5;
-var <- (str)c<-"c is: ";
+var <- (nam)a<10;
+var <- (num)b<10 - 5;
+var <- (str)c<"c is: ";
 println <- (str)"Hello World!";
 ```
