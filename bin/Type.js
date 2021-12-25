@@ -6,7 +6,7 @@ let Type = function (variable) {
 		if (variable.match && variable.match(/\".+?\"/gm) !== null) {
 			if (variable.match(/\"/gm).length % 2 === 0) {
 				if (variable.match(/\".+?\"/gm).length === 1) {
-					if ((variable.match(/\".+?\"/gm)[0].lenght - 2) === 1) {
+					if ((variable.match(/\".+?\"/gm)[0].length - 2) === 1) {
 						return "char";
 					} else {
 						return "str";

@@ -1,4 +1,4 @@
 println<-(num)10;
 println<-(float)10.9;
 println<-(num)10+9; #Innovations is is #
-#var<-(num)a<-10; Not working; Problem in Dictionary.js
+var<-(num)a<10;

@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "The language of dreams",
   "main": "index.js",
-  "bin": {
-    "mycoffeelang": "bin/Lexer.js"
-  },
   "scripts": {
     "test": "node bin/index.js"
   },
   "author": "EtherCD",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "mycoffeelang": "bin/Dictionary.js"
+  },
+  "directories": {
+    "example": "examples"
+  }
 }

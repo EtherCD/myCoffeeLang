@@ -22,8 +22,7 @@ let dictionary = {
 				return;
 			}
 
-			return `printf("${typeSymbol}", ${parsedValue});\n`
-		},
+			return `printf("${typeSymbol}", ${parsedValue});\n`},
 		println : function (type, val) {
 			let typeSymbol = "%";
 			let parsedValue = Eval(val);
@@ -43,15 +42,17 @@ let dictionary = {
 				return;
 			}
 
-			return `printf("${typeSymbol}\\n", ${parsedValue});\n`
-		},
+			let currentParsedValue = parsedValue.replace('"', "");
+
+			if (type === "str") return `printf("${typeSymbol}\\n", "${currentParsedValue}");\n`
+			else if (type === "char") return `printf("${typeSymbol}\\n", '${currentParsedValue}');\n`},
 		var : function (type, val) {
-			if (val.match(/\<\-/gm).length !== 1) {
-				console.error("Variable declaration error: Unknown synax: "+val);
+			if (val.match(/\</gm).length !== 1) {
+				console.error("Variable declaration error: Unknown synax -> "+val);
 				return;
 			} else {
-				let varName = val.split("<-")[0].trim();
-				let varValue = val.split("<-")[1].trim();
+				let varName = val.split("<")[0].trim();
+				let varValue = val.split("<")[1].trim();
 
 				if (Type(varValue) !== type) {
 					console.error("Variable declaration error: Type error ->" + type);
@@ -75,8 +76,7 @@ let dictionary = {
 						}
 					}
 				}
-			}
-		}
+			}}
 	},
 	"types": [
 		"num",
