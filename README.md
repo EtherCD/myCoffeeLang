@@ -1,5 +1,5 @@
 # myCoffeeLang
-**The language of dreams or nightmares**
+**This is an unusual programming language**
 
 ***An unusual programming language based on operators like <strong><-</strong> or <strong>-></strong>***
 
